@@ -1,5 +1,5 @@
 # Heston-Model-Hardware-Acceleration
-### Description
+## Description
 This is a project for undergraduate research program at National Taiwan University, advised by Prof. Yi-Chang Lu.  
 This work implements a hardware accelerator for option pricing using Heston model and Monte Carlo simulation.  
   
@@ -20,16 +20,16 @@ After going through 10000 different random process/path samples that end at day 
   <img src="./image/HestonMC2.gif" alt="animated" width=40%/>
 </p>
 
-### Hardware Design
+## Hardware Design
 
-### Simulation
+## Simulation
 
-### Schematic View
+## Schematic View
 <p align="center">
   <img src="./image/double_core_schematic.PNG" width=40%/>
 </p>
 
-### Layout
+## Layout
 clock tree
 <p align="center">
   <img src="./image/double_core_clock.PNG" width=40%/>
