@@ -26,15 +26,36 @@ After going through 10000 different random process/path samples that end at day 
 ## Simulation
 To test the quality of the U(0, 1) RNG, run the testbench to get the random samples written into U01.txt.  
 ```
-$ ncverilog U01_tb.v U01.v -y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v +notimingchecks +access+r
+$ ncverilog U01_tb.v U12.v U01.v -y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v +notimingchecks +access+r
 ```
 Note the -y path is to specify the directory of required designware module.  
 Then use the code written in the ipython notebook to see the mean, variance of the distribution and a comparison to ideal U(0, 1).
 <p align="center">
   <img src="./image/Uniform(0,1).PNG" width=40%/>
-</p>
-<p align="center">
   <img src="./image/U(0,1)_diff.PNG" width=40%/>
+</p>
+
+To test the quality of the Gaussian RNG, first copy the required file for designware module.  
+```
+$ cp /usr/cad/synopsys/synthesis/cur/dw/sim_ver/DW_sqrt_function.inc DW_sqrt_function.inc
+```
+Then run the testbench to get the random samples written into GRNG1.txt.  
+```
+$ ncverilog Id_Gaussian_tb.v U12.v U01.v Id_Gaussian.v -y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v +notimingchecks +access+r
+```
+Manually modify the Id_Gaussian_tb.v and run the above command again to get GRNG2.txt.  
+Use the code written in the ipython notebook to see the mean, variance, correlation, and a display of the distribution.
+<p align="center">
+  <img src="./image/Gaussian.PNG" width=40%/>
+</p>
+
+To test the quality of the correlation module, run and modify the Correlator_tb.v to get the random samples written into Corr1.txt and Corr2.txt.  
+```
+$ ncverilog Correlator_tb.v U12.v U01.v Id_Gaussian.v Correlator.v -y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v +notimingchecks +access+r
+``` 
+Then use the code written in the ipython notebook to see the mean, variance, correlation, and a display of the distribution.
+<p align="center">
+  <img src="./image/Correlated.PNG" width=40%/>
 </p>
 
 ## Schematic View
