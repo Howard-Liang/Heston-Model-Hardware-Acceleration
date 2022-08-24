@@ -1,4 +1,5 @@
 # Heston-Model-Hardware-Acceleration
+
 ## Description
 This is a project for undergraduate research program at National Taiwan University, advised by Prof. Yi-Chang Lu.  
 This work implements a hardware accelerator for option pricing using Heston model and Monte Carlo simulation.  
@@ -38,3 +39,10 @@ chip
 <p align="center">
   <img src="./image/double_core_APR.PNG" width=40%/>
 </p>
+
+## Author
+Contributors names and contact info
+
+Hao-Wei, Liang (b07502022@ntu.edu.tw)
+
+If you have any question, please contact me with the email address above.
