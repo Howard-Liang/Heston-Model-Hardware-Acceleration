@@ -24,6 +24,18 @@ After going through 10000 different random process/path samples that end at day 
 ## Hardware Design
 
 ## Simulation
+To test the quality of the U(0, 1) RNG, run the testbench to get the random samples written into U01.txt.  
+```
+$ ncverilog U01_tb.v U01.v -y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v +notimingchecks +access+r
+```
+Note the -y path is to specify the directory of required designware module.  
+Then use the code written in the ipython notebook to see the mean, variance of the distribution and a comparison to ideal U(0, 1).
+<p align="center">
+  <img src="./image/Uniform(0,1).PNG" width=40%/>
+</p>
+<p align="center">
+  <img src="./image/U(0,1)_diff.PNG" width=40%/>
+</p>
 
 ## Schematic View
 <p align="center">
