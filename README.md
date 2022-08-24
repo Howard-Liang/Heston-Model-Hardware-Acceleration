@@ -17,5 +17,24 @@ Monte Carlo simulation is a method that rely on repeated independent random samp
 Below is a simple demo of Heston model Monte Carlo simulation for a asset that starts with a price of 100.  
 After going through 10000 different random process/path samples that end at day 365, we can collect the 10000 different results and compute the appropriate 1 year option price for this asset. 
 <p align="center">
-  <img src="./image/HestonMC2.gif" alt="animated" width=60%/>
+  <img src="./image/HestonMC2.gif" alt="animated" width=40%/>
+</p>
+
+### Hardware Design
+
+### Simulation
+
+### Schematic View
+<p align="center">
+  <img src="./image/double_core_schematic.PNG" width=40%/>
+</p>
+
+### Layout
+clock tree
+<p align="center">
+  <img src="./image/double_core_clock.PNG" width=40%/>
+</p>
+chip
+<p align="center">
+  <img src="./image/double_core_APR.PNG" width=40%/>
 </p>
