@@ -39,6 +39,10 @@ chip
 <p align="center">
   <img src="./image/double_core_APR.PNG" width=40%/>
 </p>
+area
+<p align="center">
+  <img src="./image/double_core_area.PNG" width=40%/>
+</p>
 
 ## Author
 Contributors names and contact info
