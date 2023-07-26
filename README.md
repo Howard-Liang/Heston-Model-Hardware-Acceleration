@@ -46,6 +46,12 @@ The Correlator module generates the correlated bivariate Gaussian samples with c
 <p align="center">
   <img src="./image/Correlator.png" width=30%/>
 </p>
+With the bivariate Gaussian random number generator, we can implement the pipelined core computing the simulation path of <i>S</i><sub>i</sub> and <i>V</i><sub>i</sub> with Monte Carlo method.
+<br />
+<br />
+<p align="center">
+  <img src="./image/Path_pipe.png" width=85%/>
+</p>
 
 ## Simulation
 To test the quality of the U(0, 1) RNG, run the testbench to get the random samples written into U01.txt.  
