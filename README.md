@@ -40,6 +40,12 @@ Box-Muller transformation is implemented with various Design Ware's floating poi
 <p align="center">
   <img src="./image/Id_Gaussian.png" width=60%/>
 </p>
+The Correlator module generates the correlated bivariate Gaussian samples with coloring transform.
+<br />
+<br />
+<p align="center">
+  <img src="./image/Correlator.png" width=30%/>
+</p>
 
 ## Simulation
 To test the quality of the U(0, 1) RNG, run the testbench to get the random samples written into U01.txt.  
