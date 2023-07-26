@@ -78,7 +78,7 @@ Then use the code written in the ipython notebook to see the mean, variance, cor
 
 ## Schematic View
 <p align="center">
-  <img src="./image/double_core_schematic.PNG" width=40%/>
+  <img src="./image/schematic.PNG" width=40%/>
 </p>
 
 ## Layout
