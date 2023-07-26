@@ -22,6 +22,24 @@ After going through 10000 different random process/path samples that end at day 
 </p>
 
 ## Hardware Design
+The Gaussian random samples are generated with LFSR, Box-Muller transformation and coloring transform.
+<br />
+With IEEE 754 single precision format
+<p align="center">
+  <img src="./image/IEEE_754.png" width=60%/>
+</p>
+setting the Sign bit field to 0, the Exponent field to 01111111, and using a 23 bits LFSR as the Mantissa field can represent a Uniform(1, 2) distribution.
+<p align="center">
+  <img src="./image/LFSR.png" width=60%/>
+</p>
+Offsetting the Uniform(1, 2) distribution with -1, we can obtain an Uniform(0, 1) distribution.
+<br />
+Box-Muller transformation is implemented with various Design Ware's floating point arithmetics. The result G1 and G2 are Gaussian samples independent to each other.
+<br />
+<br />
+<p align="center">
+  <img src="./image/Id_Gaussian.png" width=60%/>
+</p>
 
 ## Simulation
 To test the quality of the U(0, 1) RNG, run the testbench to get the random samples written into U01.txt.  
