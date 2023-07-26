@@ -17,6 +17,8 @@ Monte Carlo simulation is a method that rely on repeated independent random samp
 <br />
 Below is a simple demo of Heston model Monte Carlo simulation for a asset that starts with a price of 100.  
 After going through 10000 different random process/path samples that end at day 365, we can collect the 10000 different results and compute the appropriate 1 year option price for this asset. 
+<br />
+<br />
 <p align="center">
   <img src="./image/HestonMC2.gif" alt="animated" width=40%/>
 </p>
@@ -55,10 +57,14 @@ With the bivariate Gaussian random number generator, we can implement the pipeli
 Note that since the RNG can provide a sample every clock cycle, the additional green pipeline registers and some control logic design make the hardware utilization rate of the floating point arithmetic units optimal.
 <br />
 Without those registers, we need four times the arithmetic units to keep up with/fully utilize our RNG and pipeline design. This design has the same throughput as the final design, as it can simulate 4 paths at a time. However, this results in many unused arithmetic units in the pipeline stages.
+<br />
+<br />
 <p align="center">
   <img src="./image/hardware_utilization_1.png" width=30%/>
 </p>
 With the additional pipeline registers, we can simulate 4 paths at a time using only one set of arithmetic units. Each stage of the pipeline is computing for one simulation path at a given time.
+<br />
+<br />
 <p align="center">
   <img src="./image/hardware_utilization_2.png" width=30%/>
 </p>
