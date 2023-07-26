@@ -52,6 +52,9 @@ With the bivariate Gaussian random number generator, we can implement the pipeli
 <p align="center">
   <img src="./image/Path_pipe.png" width=85%/>
 </p>
+Note that since the RNG can provide a sample every clock cycle, the additional green pipeline registers and some control logic design make the hardware utilization rate of the floating point arithmetic units optimal.
+<br />
+Without those registers, we need four times the floating point arithmetic units to keep up with/fully utilize our RNG and pipeline design.
 
 ## Simulation
 To test the quality of the U(0, 1) RNG, run the testbench to get the random samples written into U01.txt.  
