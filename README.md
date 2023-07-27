@@ -8,7 +8,7 @@ The Heston model, named after Steven L. Heston, is a mathematical model that use
 <p align="center">
   <img src="./image/Heston_model.PNG" width=60%/>
 </p>
-Note that in the above equations, the two W variables are Wiener processes (i.e., continuous random walks) with arbitrary correlation.  
+Note that in the above equations, the two <i>W</i> variables are Wiener processes (i.e., continuous random walks) with arbitrary correlation.  
 For more information about the model, please refer to "A Closed-Form Solution for Options with Stochastic Volatility with Applications to Bond and Currency Options", by Steven L. Heston.  
 <br />
 <br />
