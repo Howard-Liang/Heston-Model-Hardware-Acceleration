@@ -104,6 +104,12 @@ Then use the code written in the ipython notebook to see the mean, variance, cor
   <img src="./image/Correlated.PNG" width=40%/>
 </p>
 
+To simulate the module, run the Path_pipe_tb.v to get the option prices written into Path_pipe.txt.  
+```
+$ ncverilog Path_pipe_tb.v U12.v U01.v Id_Gaussian.v Correlator.v Path_pipe.v -y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v +notimingchecks +access+r
+``` 
+Then use the code written in the ipython notebook to read the hardware MC core result and compute the final option price.
+
 ## Schematic View
 <p align="center">
   <img src="./image/schematic.PNG" width=40%/>
